@@ -12,8 +12,8 @@ app.use(express.json());
 
 
 
-app.get("/", () => {
-  console.log("Welcome to the Home page of Talkbubble")
+app.get("/", (req,res) => {
+  res.send("Welcome to the Home page of Talkbubble")
 })
 
 
