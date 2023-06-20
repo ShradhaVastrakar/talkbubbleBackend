@@ -10,9 +10,13 @@ require("dotenv").config();
 app.use(cors());
 app.use(express.json());
 
+
+
 app.get("/", () => {
   console.log("Welcome to the Home page of Talkbubble")
 })
+
+
 
 mongoose
   .connect(process.env.MONGO_URL, {
