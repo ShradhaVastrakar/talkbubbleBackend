@@ -10,21 +10,13 @@ require("dotenv").config();
 app.use(cors());
 app.use(express.json());
 
-
-
-app.get("/", () => {
-  console.log("Welcome to the Home page of Talkbubble")
-})
-
-
-
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(() => {
-    console.log("DB Connetion Successfull");
+    console.log("DB Connection Successfull");
   })
   .catch((err) => {
     console.log(err.message);
