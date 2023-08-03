@@ -13,9 +13,8 @@ app.use(express.json());
 
 
 app.get("/", (req,res) => {
-  res.send("Welcome to the Home page of Talkbubble")
+  res.send("Welcome to the Backend of Talkbubble")
 })
-
 
 
 mongoose
