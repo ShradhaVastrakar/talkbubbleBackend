@@ -7,6 +7,7 @@ const app = express();
 const socket = require("socket.io");
 require("dotenv").config();
 
+//BACKEND DEPLOY --> https://talkbubble-backend.onrender.com/
 app.use(cors());
 app.use(express.json());
 
@@ -37,7 +38,7 @@ const server = app.listen(process.env.PORT, () =>
 );
 const io = socket(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://talkbubble-frontend.vercel.app",
     credentials: true,
   },
 });
